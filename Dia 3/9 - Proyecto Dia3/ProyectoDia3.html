@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>Encuesta Responde Rapido</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="comenzarCuentaRegresiva()">
+    <h2>Responde a las siguientes preguntas en: <span id="cuentaRegresiva"></span></h2>
+    <br>
+    <ol>
+    <li><p>Campeon del mundo de MotoGP 2023:</p></li>
+    <input type="text" id="Respuesta1">
+    <li><p>Subcampeon de MotoGP 2023:</p></li>
+    <input type="text" id="Respuesta2">
+    <li><p>Piloto que cambia a la Marca Gresini Racing:</p></li>
+    <input type="text" id="Respuesta3">
+    <li><p>Piloto con el Dorsal 73:</p></li>
+    <input type="text" id="Respuesta4">
+    <li><p>Piloto con el Dorsal 46:</p></li>
+    <input type="text" id="Respuesta5">
+    </ol>
+    <br><br>
+    <button onclick="terminarFormulario()">Finalizar</button>
+    <button onclick="reiniciarPreguntas()">Reiniciar</button>
+
+<audio id="audioFinal">
+    <source src="GameOver.mp3.mpeg" type="audio/mpeg">
+    Sonido no habilitado
+</audio>
+
+<script>
+    let tiempoTerminado;
+    let intervaloDeTiempo;
+
+    function comenzarCuentaRegresiva(){
+        tiempoTerminado = setTimeout(tiempoCumplido,30000);
+        intervaloDeTiempo = setInterval(ticTac,1000);
+
+        document.getElementById("cuentaRegresiva").textContent = 30;
+
+    }
+    function ticTac(){
+        let tiempo = document.getElementById("cuentaRegresiva").textContent;
+        document.getElementById("cuentaRegresiva").textContent = tiempo -1;
+    }
+    function tiempoCumplido(){
+        clearInterval(intervaloDeTiempo);
+        document.getElementById("cuentaRegresiva").textContent = 0;
+        document.getElementById("audioFinal").play();
+        alert("Game Over: Se acabo el tiempo. Intenta de nuevo");  
+    }
+
+    function terminarFormulario(){
+        clearTimeout(tiempoTerminado);
+        clearInterval(intervaloDeTiempo);
+
+        let fecha = new Date();
+        let Respuesta1 = document.getElementById("Respuesta1").value;
+        let Respuesta2 = document.getElementById("Respuesta2").value;
+        let Respuesta3 = document.getElementById("Respuesta3").value;
+        let Respuesta4 = document.getElementById("Respuesta4").value;
+        let Respuesta5 = document.getElementById("Respuesta5").value;
+
+        let mensaje = fecha.toLocaleDateString("es-Es") + "\n" +
+                        "1. " + Respuesta1 + "\n" +
+                        "2. " + Respuesta2 + "\n" +
+                        "3. " + Respuesta3 + "\n" +
+                        "4. " + Respuesta4 + "\n" +
+                        "5. " + Respuesta5;
+
+        alert(mensaje);             
+    }
+
+    function reiniciarPreguntas(){
+        location.reload();
+    }
+</script>
+
+</body>
+</html>

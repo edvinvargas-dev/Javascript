@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>Fecha Y Hora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body onload="IniciaReloj()">
+    <h2 align="center" style="color: blue">Colocando audio de alarma</h2>
+    digita los segundos para que suene la Alarma:
+    <br>
+    <input type="number" id="IDdigitarNumeros">
+    <button onclick="fnIniciarTiempo()">Alarma</button>
+    <br><br><br>
+    <button onclick="reiniciar()">Reiniciar Alarma</button>    
+    <h1 id="Salida" >Alarma apagada</h1>
+    <h1 id="Reloj">00:00:00</h1>
+    <audio controls id="AudioGmOv">
+        <source src="GameOver.mpeg" type="audio/mpeg">
+        audio no habilitado
+    </audio>
+
+    <script>
+        let vIntnumerosDigitados = document.getElementById("IDdigitarNumeros");
+        let mensaje = "Alarma Encendida";
+        let elementosalida = document.getElementById("Salida");
+        let elementoaudio = document.getElementById("AudioGmOv");
+        let elementoReiniciarDatos = document.getElementById("ReiniciarDatos");
+        let cambiarHora = document.getElementById("Reloj");
+
+        function fnIniciarTiempo(){
+            setTimeout(tiempoTerminado, 1000 * vIntnumerosDigitados.value);
+        }
+
+        function IniciaReloj(){
+            setInterval(ticTac,1000);
+        }
+
+        function ticTac(){
+            let TiempoActual = new Date()
+            let Hora = String(TiempoActual.getHours()).padStart(2,"0");
+            let Minutos = String(TiempoActual.getMinutes()).padStart(2,"0");
+            let segundos= String(TiempoActual.getSeconds()).padStart(2,"0");
+
+            let RelojActual =  Hora +":"+ Minutos +":"+ segundos;
+
+            cambiarHora.textContent = RelojActual;
+        }
+
+        function tiempoTerminado(){
+            elementosalida.textContent = mensaje;
+            elementosalida.style.color = "green";
+            elementoaudio.play()
+        }
+
+        function reiniciar(){
+            location.reload()
+        }
+    </script>
+</body>
+</html>

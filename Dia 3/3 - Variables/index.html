@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Variables</title>
+</head>
+<body>
+    <h2 align="center">Probando variables e inputs</h2>
+    Ingresa tu Nombre:
+    <input type="text" id="IdIngresaNombre">
+    <br><br>
+    Ingresa tu Edad:
+    <input type="number" id="IdEdad">
+    <button onclick="FunRegistrarDatos()">Registrar Datos</button>
+    <br><br><br>
+    <button onclick="FunReiniciarDatos()">Reiniciar Datos</button>
+    <script>
+
+        function FunRegistrarDatos(){
+            let vStrIngresaTuNombre = document.getElementById("IdIngresaNombre").value
+            let vIntEdad = document.getElementById("IdEdad").value
+            alert("Hola "+ vStrIngresaTuNombre +" tienes "+ vIntEdad +" aun estas a tiempo de cumplir tus sueños.")
+        }
+
+        function FunReiniciarDatos(){
+            location.reload()
+        }
+        
+
+    </script>
+</body>
+</html>

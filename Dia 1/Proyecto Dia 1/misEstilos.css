@@ -1,0 +1,54 @@
+body{
+    color:white;
+    text-align: justify;
+    background-image: url(Imagen/fondo.jpg);
+    background-size: 100%;
+    
+
+}
+a:hover h1{
+    color:chartreuse
+}
+ .tex1{
+    color:lime
+ }   
+h5{
+    color:chartreuse;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 05px;
+    font-size: larger;
+    backdrop-filter: blur(40px);
+    width: 30%;
+    border-radius:1px;
+    line-height:1;
+    
+}
+
+p::first-line{
+    background-color:white;
+    color:black
+}
+
+.Menu a[href]{
+    color: white;
+    background-color:black;
+}
+.Menu a:hover {
+    color: brown;
+    text-decoration-line: underline;
+}
+.Name{
+    color:red
+}
+
+
+h2:hover{
+    color: chartreuse;
+}
+
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#info {
+    text-align: center
+}

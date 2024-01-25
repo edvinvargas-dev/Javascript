@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Recomendacion de peliculas</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="Scripts.js"></script>
+</head>
+<body>
+    <button onclick="BorrarDatos()" class="BorrarDatos">Borrar Datos</button>
+    <h1>CATALOGO DE PELICULAS</h1>
+    <p class="Introduccion" >"Descubre una experiencia cinematográfica personalizada. Para brindarte las mejores recomendaciones de películas adaptadas a tus preferencias, te invitamos a proporcionar tu edad y seleccionar tu categoría de interés. 
+        <br>Así, podemos ofrecerte opciones específicas y asegurar que cada recomendación se ajuste a tus gustos. 
+        <br>¡Prepárate para disfrutar de una selección cuidadosamente curada de las mejores películas, diseñada para complacer tus preferencias cinematográficas!"</p>
+
+    <div class="centrarelementos">
+        <p>Ingresa tu edad aquí:</p>
+        <input type="text" id="numberedad">
+        
+    </div>
+    <br>
+    <DIV class="generos">
+        <button onclick="recomendar('comedia')">COMEDIA</button>
+        <button onclick="recomendar('drama')">DRAMA</button>
+        <button onclick="recomendar('musical')">MUSICAL</button>
+        <button onclick="recomendar('crimen')">CRIMEN</button>
+    </DIV>
+    <div class="TextRecomendacion">
+        <p id="textorecomendacion"></p>
+        <p id="cambiarTexto"></p>
+    </div>
+</body>
+</html>

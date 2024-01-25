@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="misEstilos.css">
+    <script src="calculato.js"></script>
+</head>
+<body align="center">
+    <h2>CALCULADORA</h2>
+    <br>
+    <input type="text" id="Dato1">
+    <input type="text" id="Dato2">
+    <br><br>
+    
+        <button onclick="suma()">+</button>
+        <button onclick="resta()">-</button>
+        <button onclick="multiplicar()">X</button>
+        <button onclick="dividir()">/</button>
+    
+    <br><br>
+    <div class="doble">
+        <button onclick="potencia()">potencia</button><button onclick="raiz()">raíz</button>
+        <br>
+        <button onclick="absoluto()">absoluto</button><button onclick="random()">random</button>
+    </div>
+    RESULTADO
+    <br>   
+    <input type="text" id="CampoResultado">
+    <br>
+    <br>
+    <div class="triple">
+        <button onclick="round()">round</button><button onclick="floor()">floor</button><button onclick="ceil()">ceil</button>
+    </div>
+    <br>
+    <button id="reiniciarDatos" onclick="reload()">Reiniciar Datos</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+    <h2 align="center" style="color: blue">REALIZANDO UN TEMPORIZADOR</h2>
+    digita los segundos para que suene la Alarma:
+    <br>
+    <input type="number" id="IDdigitarNumeros">
+    <button onclick="fnIniciarTiempo()">Alarma</button>
+    <h1 id="Salida">Alarma apagada</h1>
+
+    <script>
+        let vIntnumerosDigitados = document.getElementById("IDdigitarNumeros");
+        let mensaje = "Alarma Encendida";
+        let elementosalida = document.getElementById("Salida") 
+
+        function fnIniciarTiempo(){
+            setTimeout(tiempoTerminado, 1000 * vIntnumerosDigitados.value);
+        }
+
+        function tiempoTerminado(){
+            elementosalida.textContent = mensaje;
+            elementosalida.style.color = "green"
+        }
+    </script>
+</body>
+</html>

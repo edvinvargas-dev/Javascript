@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Parametros</title>
+    <link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+    <h1 align="center">SUMAR PARAMETROS</h1>
+    <p>numero1:</p>
+    <input type="number" id="PrimerNumero">
+    <p>numero2:</p>
+    <input type="number" id="SegundoNumero">  
+    <br><br><br><br> 
+    <button onclick="fnCalcular()">calcular</button>
+    <button onclick="Borrar()">Borrar Datos</button>
+    <p align="center" id="IDResultado"></p>
+    
+    <script>
+        function sumar(numero1,numero2){
+            resultado = +numero1 + +numero2;
+            return resultado
+        }
+
+        function fnCalcular(){
+            let num1 = document.getElementById("PrimerNumero");
+            let num2 = document.getElementById("SegundoNumero");
+            let calculo = document.getElementById("IDResultado");
+            let elementosuma = sumar(num1.value,num2.value);
+
+            calculo.textContent= elementosuma
+        }
+
+        function Borrar(){
+            location.reload()
+        }
+    </script>
+</body>
+</html>
