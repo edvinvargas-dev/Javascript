@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Motivador de usuarios</title>
+</head>
+<body>
+    <h2 align="center">Motivador de usuarios</h2>
+    <br><br>
+   Ingresa tu Nombre:
+   <input type="text" id="ingresaTuNombre">
+   
+   <br><br><br>
+   Ingresa tu sueño a corto plazo:
+   <input type="text" id="ingresaTusSueños">
+   <button onclick="hazloRealidad()">Hazlo realidad¡</button>
+   <br><br><br>
+   <button onclick="reinicio()">Reiniciar</button>
+   <script>
+        function hazloRealidad(){
+            alert("Hola " + document.getElementById("ingresaTuNombre").value + " lucha por tu sueño de ser " + document.getElementById("ingresaTusSueños").value)
+        }
+        function reinicio(){
+            location.reload()
+        }
+   </script>
+    
+
+    
+</body>
+</html>

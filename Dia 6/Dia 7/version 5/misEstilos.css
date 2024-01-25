@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    background-image: url(donas.png);
+    background-size: 40px;
+    backdrop-filter: blur(3px);
+    display: grid;
+    height: 2%;
+    width: 40%;
+    margin-left: 30%;
+}
+#Boton{
+    display: block;
+    margin: auto;
+}
+img {
+    width: 50px;
+}
+.titulo1{
+    font-weight: bolder;
+    color:black;
+}
+.titulo1:hover{
+    color:white;
+}
+.Tiendas label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    color:black;
+}
+.Tiendas input{
+    width: 150px;
+    height: 30px;
+}
+#Boton {
+    width: 150px;
+    height: 30px;
+    font-size: medium;
+}

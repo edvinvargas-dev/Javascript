@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Crear QR</title>
+    <script src="https://cdn.jsdelivr.net/jsbarcode/latest/JsBarcode.all.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        #codigoBarras {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <label for="Placas">Ingresar Placas:<input type="text" id="Placas"></label>
+    <button onclick="guardarInformacion()">Guardar Datos</button>
+    <button onclick="reiniciarDatos()">Reiniciar</button>
+    <p id="pegarDatos"></p>
+    <svg id="codigoBarras"></svg>
+</body>
+</html>
+

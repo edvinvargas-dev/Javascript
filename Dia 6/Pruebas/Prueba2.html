@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head><title>Prueba2</title>
+<link rel="stylesheet" href="misEstilos.css">
+</head>
+<body>
+    <h2 align="center">Probando reemplazar datos con text.content</h2>
+
+    Ingresa tu nombre:
+    <input type="text" id="IDingrstunombre">
+    <br><br>
+    Ingresa tu meta por cumplir:
+    <input type="text" id="IDmetaporcumplir">
+    <br><br>
+    <button onclick="funCumplirSueños()">Cumple tus sueños</button>
+    <br><br>
+    <button onclick="funBorrarDatos()">Borrar datos</button>
+    <br><br><br>
+    <H2 align="center" class="textorojo" id="IDsalida">SI NO LUCHAS POR TUS SUEÑOS SERAS UN PERDEDOR FOR EVER, FOR EVER</H2>
+
+    <script>
+        function funCumplirSueños(){
+            let vStrIngresaTuNombre = document.getElementById("IDingrstunombre").value;
+            let vStrIngresaTuMeta = document.getElementById("IDmetaporcumplir").value;
+            let Mensaje = vStrIngresaTuNombre + " estas por cumplir tu sueño de "+vStrIngresaTuMeta+" asi que LUCHA POR ESTA META!!!!";
+            let vStrsalida = document.getElementById("IDsalida");
+            vStrsalida.textContent = Mensaje;
+            vStrsalida.style.color= "green";
+        }
+
+        function funBorrarDatos(){
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>
